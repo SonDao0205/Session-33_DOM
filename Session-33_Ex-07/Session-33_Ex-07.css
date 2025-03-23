@@ -1,76 +1,113 @@
-* {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  box-sizing: border-box;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
 }
 
-.container h1{
-    text-align: center;
-}
-
-img{
-    width: 100%;
-}
-
-ul{
-    list-style: none;
-}
-
-.product{
+.container {
+    max-width: 1200px;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: grid;
+    grid-template-columns: 2fr 1fr;
     gap: 20px;
+}
+
+/* Tiêu đề chính */
+h1 {
     text-align: center;
+    font-weight: bold;
+    grid-column: span 2;
+    margin-bottom: 20px;
 }
 
-.row{
-    gap: 20px;
-}
-
-.col{
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 30px;
-}
-
-.cart {
-    background: white;
-    border-radius: 12px;
+/* Phần sản phẩm */
+.products {
     padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#productList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     margin-top: 20px;
-    width: 300px;
-    float: right;
+}
+
+.product {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.name {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.price {
+    color: red;
+    font-weight: bold;
+}
+
+.btn-success {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#carts {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+#cartList {
+    list-style: none;
+    padding: 0;
+}
+
+#cartList .product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#cartList .btn-success,
+#cartList .btn-danger {
+    margin-left: 5px;
+}
+
+.total {
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 .btn-primary {
     width: 100%;
-    font-size: 18px;
-    padding: 10px;
-    border-radius: 8px;
+    display: block;
     margin-top: 10px;
 }
 
-.btn-primary:hover {
-    background-color: #0056b3;
-}
-
-.nameAndPrice{
-    display: flex;
-    flex-direction: column;
-}
-
-.price{
-    color: red;
-}
-
-.add{
-    display: flex;
-    flex-direction: row;
-}
-
-ul{
-    display: flex;
-    flex-direction: row;
-}
